@@ -1,0 +1,44 @@
+;(5684/4+357/3+245/5)*3
+MOV C1,R0
+MOV C2,R1
+DIV R1,R0
+PUSH R0
+;5684/4
+
+MOV C3,R0
+MOV C4,R1
+DIV R1,R0
+;357/3
+POP R1
+ADD R1,R0
+PUSH R0
+;1)+
+
+MOV C5,R0
+MOV C6,R1
+DIV R1,R0
+;245/5
+POP R1
+ADD R1,R0
+;2) +
+
+MOV C4,R1
+MUL R1,R0
+;/3
+MOV R0, RESULT
+
+STOP
+C1:
+data 1634
+C2:
+data 4
+C3:
+data 165
+C4:
+data 3
+C5:
+data F5
+C6:
+data 5
+RESULT:
+data 0

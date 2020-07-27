@@ -1,0 +1,34 @@
+;(7845/4+935/2+874/4)*2
+MOV C1,R0
+MOV C2,R1
+DIV R1,R0
+
+MOV C3,R1
+MOV C4,R2
+DIV R2,R1
+
+MOV C5,R2
+MOV C6,R3
+DIV R3,R2
+
+ADD R0,R1
+ADD R1,R2
+MOV C4,R3
+MUL R2,R3
+MOV R3, RESULT
+
+STOP
+C1:   
+data 1EA5
+C2:
+data 4
+C3:
+data 3A7
+C4:
+data 2
+C5:
+data 36A
+C6:
+data 4
+RESULT:
+data 0
